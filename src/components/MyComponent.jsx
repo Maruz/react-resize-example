@@ -17,9 +17,7 @@ class MyComponent extends Component {
     }
 
     componentDidMount() {
-        if (this.element && this.element.offsetWidth > 0 && this.state.offsetWidth === 0) {
-            this.updateWidth(this.element.offsetWidth);
-        }
+        this.updateWidth(this.element.offsetWidth);
     }
 
     componentWillUnmount() {
@@ -33,12 +31,12 @@ class MyComponent extends Component {
         }, 250);
     }
 
-    updateWidth(offsetWidth) {
-        this.setState({ offsetWidth });
-    }
-
     setElementRef(element) {
         this.element = element;
+    }
+
+    updateWidth(offsetWidth) {
+        this.setState({ offsetWidth });
     }
 
     render() {
