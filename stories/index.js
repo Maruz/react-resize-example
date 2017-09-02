@@ -6,8 +6,8 @@ import Col from '../src/components/Col';
 import Row from '../src/components/Row';
 import MyComponent from '../src/components/MyComponent';
 
-storiesOf('Component with', module)
-    .add('wrapper', () => (
+storiesOf('examples', module)
+    .add('Get component width', () => (
         <Container>
             <Row>
                 <Col sm={3}>
